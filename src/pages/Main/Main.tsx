@@ -1,14 +1,16 @@
 import React from "react";
 import SearchInput from "./components/SearchInput";
 import MainView from "./Main.view";
-import { MainListData } from "./data/data";
+import { MainListData, tagList } from "./data/data";
+import SortInput from "./components/SortInput";
 
 const Main = () => {
   return (
-    <>
-      <SearchInput />
+    <div>
+      <SearchInput tagList={tagList} />
+      <SortInput />
       <MainView list={MainListData} />
-    </>
+    </div>
   );
 };
 

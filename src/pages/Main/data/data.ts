@@ -23,7 +23,7 @@ export const MainListData: MainListType = {
             id: 1,
             name: "팀 이름",
             totalMember: 10,
-            currentMember: 5,
+            currentMember: 10,
             hashtagList: [
                 {
                 hashtag: "FE",
@@ -36,7 +36,19 @@ export const MainListData: MainListType = {
                 {
                     hashtag: "DevOps",
                     color: "afb83b"
-                }
+                },
+                {
+                    hashtag: "DevOps",
+                    color: "afb83b"
+                },
+                {
+                    hashtag: "DevOps",
+                    color: "afb83b"
+                },
+                {
+                    hashtag: "FE",
+                    color: "afb83b"
+                },
             ]
         },
         {
@@ -121,3 +133,5 @@ export const MainListData: MainListType = {
         },
     ]
 }
+
+export const tagList = ["FE", "BE", "DevOps", "Spring", "Java"];

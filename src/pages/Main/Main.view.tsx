@@ -1,3 +1,4 @@
+import { Space } from "antd";
 import React from "react";
 import MainItem from "./components/MainItem";
 import { MainListType } from "./data/data";
@@ -10,14 +11,11 @@ const MainView = ({ list }: Props) => {
   const { totalCount, currentPage, teamList } = list;
 
   return (
-    <div>
+    <Space wrap>
       {teamList.map((item) => (
         <MainItem key={item.id} item={item} />
       ))}
-      <div>
-        {currentPage} / {totalCount}
-      </div>
-    </div>
+    </Space>
   );
 };
 
