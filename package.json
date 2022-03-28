@@ -48,7 +48,9 @@
     ]
   },
   "devDependencies": {
+    "@storybook/preset-ant-design": "0.0.2",
     "@storybook/react": "^6.4.19",
+    "storybook-addon-customize-antd-theme": "^1.1.0",
     "storybook-addon-sass-postcss": "^0.1.0"
   }
 }
