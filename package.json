@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@storybook/react": "^6.4.19"
+    "@storybook/react": "^6.4.19",
+    "storybook-addon-sass-postcss": "^0.1.0"
   }
 }
