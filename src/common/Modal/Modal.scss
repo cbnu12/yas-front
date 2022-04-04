@@ -1,0 +1,22 @@
+.modal-background {
+    background-color: #efefef;
+}
+
+.modal-container {
+    background-color: white;
+    width: 800px;
+    height: 600px;
+
+    .error-box {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+    }
+
+    button {
+        background-color: #cccccc;
+        font-weight: bold;
+        font-size: 25px;
+        color: white;
+    }
+}
