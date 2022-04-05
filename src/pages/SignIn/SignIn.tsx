@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "../../common/Modal";
 
 const SignIn = () => {
-  const [errorMessage, setErrorMessage] = useState<string>("에러요");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   return (
     <Modal
