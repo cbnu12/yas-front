@@ -25,18 +25,22 @@ const SearchInput = ({ tagList }: Props) => {
       </div>
       <div className="main__search-input__tag-container">
         {tagList.map((item) => (
-          <HashTag key={item} color="default" hashtag={item} />
+          <HashTag key={item} color="BFBFBF" hashtag={item} />
         ))}
       </div>
 
-      {/* <div>
+      <div>
         {tagList.map((item) => (
-          <HashTag hashtag={item} color="default"/>
-          <Tag key={item} color="default" icon={<CloseOutlined />}>
-            <Typography.Text strong>{item}</Typography.Text>
-          </Tag>
+          <HashTag
+            hashtag={item}
+            color="BFBFBF"
+            icon="delete"
+            onClickIcon={() => {
+              alert("delete");
+            }}
+          />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };
