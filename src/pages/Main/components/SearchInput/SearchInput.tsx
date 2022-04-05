@@ -1,5 +1,5 @@
-import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
-import { Select, Input, Tag, Typography } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
+import { Select } from "antd";
 import HashTag from "../../../../common/HashTag";
 
 import "./SearchInput.scss";
