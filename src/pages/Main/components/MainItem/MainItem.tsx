@@ -20,10 +20,8 @@ const MainItem = ({ item }: Props) => {
       <div className="main__team-item__title">{name}</div>
       <div className="main__team-item__hashtag">
         {hashtagList.map((item) => (
-          <Tag key={item.color} color={`#${item.color}`}>
-            {/* <div className="main__team-item__hashtag__item"> */}
+          <Tag key={item.hashtag} color={`#${item.color}`}>
             <Typography.Text strong>#{item.hashtag}</Typography.Text>
-            {/* </div> */}
           </Tag>
         ))}
       </div>

@@ -34,19 +34,19 @@ export const MainListData: MainListType = {
                     color: "96c3eb"
                 },
                 {
-                    hashtag: "DevOps",
+                    hashtag: "DevOps1",
                     color: "afb83b"
                 },
                 {
-                    hashtag: "DevOps",
+                    hashtag: "DevOps2",
                     color: "afb83b"
                 },
                 {
-                    hashtag: "DevOps",
+                    hashtag: "DevOps3",
                     color: "afb83b"
                 },
                 {
-                    hashtag: "FE",
+                    hashtag: "FE2",
                     color: "afb83b"
                 },
             ]
