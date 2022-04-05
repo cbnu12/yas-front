@@ -10,25 +10,32 @@ const SignIn = () => {
       onClick={() => {
         alert("로그인");
       }}
+      errorIcon="warning"
       errorMessage={errorMessage}
     >
       <input placeholder="이메일" />
       <input placeholder="비밀번호" />
-      <button
-        onClick={() => {
-          alert("비밀번호 찾기");
-        }}
-      >
-        비밀번호 찾기
-      </button>
-      아직 회원이 아니신가요?
-      <button
-        onClick={() => {
-          alert("회원가입 하기");
-        }}
-      >
-        회원가입 하기
-      </button>
+      <div className="left">
+        <button
+          className="text"
+          onClick={() => {
+            alert("비밀번호 찾기");
+          }}
+        >
+          비밀번호 찾기
+        </button>
+      </div>
+      <div className="right">
+        아직 회원이 아니신가요?
+        <button
+          className="text"
+          onClick={() => {
+            alert("회원가입 하기");
+          }}
+        >
+          회원가입 하기
+        </button>
+      </div>
     </Modal>
   );
 };
