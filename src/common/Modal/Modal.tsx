@@ -15,7 +15,9 @@ const Modal = ({ children, buttonText, onClick, errorMessage }: Props) => {
       <div className="modal-container">
         <div className="error-box">{errorMessage}</div>
         {children}
-        <button onClick={onClick}>{buttonText}</button>
+        <button className="modal-container__submit" onClick={onClick}>
+          {buttonText}
+        </button>
       </div>
     </div>
   );
