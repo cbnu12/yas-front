@@ -1,6 +1,7 @@
 import { UserOutlined } from "@ant-design/icons";
 import { Tag, Typography } from "antd";
 import React from "react";
+import HashTag from "../../../../common/HashTag";
 import { TeamItemType } from "../../data/data";
 
 import "./MainItem.scss";
@@ -20,9 +21,7 @@ const MainItem = ({ item }: Props) => {
       <div className="main__team-item__title">{name}</div>
       <div className="main__team-item__hashtag">
         {hashtagList.map((item) => (
-          <Tag key={item.hashtag} color={`#${item.color}`}>
-            <Typography.Text strong>#{item.hashtag}</Typography.Text>
-          </Tag>
+          <HashTag hashtag={item.hashtag} color={item.color} />
         ))}
       </div>
     </div>

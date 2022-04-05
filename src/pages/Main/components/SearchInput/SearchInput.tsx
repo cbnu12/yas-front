@@ -1,5 +1,6 @@
 import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
 import { Select, Input, Tag, Typography } from "antd";
+import HashTag from "../../../../common/HashTag";
 
 import "./SearchInput.scss";
 
@@ -24,14 +25,13 @@ const SearchInput = ({ tagList }: Props) => {
       </div>
       <div className="main__search-input__tag-container">
         {tagList.map((item) => (
-          <Tag key={item} color="default">
-            <Typography.Text strong>#{item}</Typography.Text>
-          </Tag>
+          <HashTag key={item} color="default" hashtag={item} />
         ))}
       </div>
 
       {/* <div>
         {tagList.map((item) => (
+          <HashTag hashtag={item} color="default"/>
           <Tag key={item} color="default" icon={<CloseOutlined />}>
             <Typography.Text strong>{item}</Typography.Text>
           </Tag>
