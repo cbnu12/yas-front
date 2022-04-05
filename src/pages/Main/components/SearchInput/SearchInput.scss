@@ -1,12 +1,44 @@
 .main__search-input{
-    width: 100%;
-
-    input {
+    
+    &__input-container {
         width: 80%;
-        height: 30px;
+        margin: auto;
         padding: 10px;
-        border-radius: 30px;
-        border: none;
-        font-size: 24px;
+        display: flex;
+
+        &__box{
+            width: 80%;
+            position: relative;
+
+            .search-icon{
+                top: 8px;
+                left: 12px;
+                font-size: 23px;
+                position: absolute;
+            }
+            
+            input{
+                width: 100%;
+                border-radius: 30px;
+                border: none;
+                font-size: 20px;
+                padding: 5px 20px;
+                text-align: center;
+            }
+            
+        }
+        select{
+            display: inline-block;
+        }
+
+        input{
+            display: inline-block;
+        }
+    }
+
+    &__tag-container{
+        width: fit-content;
+        height: fit-content;
+        margin: -5px auto 5px auto;
     }
 }
