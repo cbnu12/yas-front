@@ -4,12 +4,13 @@ import "./Modal.scss";
 
 interface Props {
   children: ReactNode;
+  className?: string;
 }
 
-const Modal = ({ children }: Props) => {
+const Modal = ({ children, className }: Props) => {
   return (
     <div className="modal-background">
-      <div className="modal-container">{children}</div>
+      <div className={`modal-container ${className}`}>{children}</div>
     </div>
   );
 };
