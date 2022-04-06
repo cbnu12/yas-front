@@ -3,5 +3,6 @@ module.exports = {
   addons: [
     "storybook-addon-sass-postcss",
     "storybook-addon-customize-antd-theme",
+    "@storybook/preset-create-react-app",
   ],
 };
