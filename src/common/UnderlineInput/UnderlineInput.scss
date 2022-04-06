@@ -1,0 +1,13 @@
+.underline-input{
+    margin: 10px auto;
+    width: 80%;
+    display: block;
+    border-style: none;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    padding: 15px;
+
+    &:focus{
+        outline: none;
+    }
+}
