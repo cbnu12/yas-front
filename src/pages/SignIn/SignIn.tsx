@@ -3,6 +3,7 @@ import BottomButton from "../../common/BottomButton";
 import ErrorBar from "../../common/ErrorBar";
 import Modal from "../../common/Modal";
 import TextButton from "../../common/TextButton";
+import UnderlineInput from "../../common/UnderlineInput";
 
 import "./SignIn.scss";
 
@@ -16,8 +17,8 @@ const SignIn = () => {
         message={errorMessage}
         icon="warning"
       />
-      <input placeholder="이메일" />
-      <input placeholder="비밀번호" />
+      <UnderlineInput placeholder="이메일" type="email" />
+      <UnderlineInput placeholder="비밀번호" type="password" />
       <div className="sign-in__left">
         <TextButton
           text="비밀번호 찾기"
