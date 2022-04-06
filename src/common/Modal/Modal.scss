@@ -20,12 +20,6 @@
         visibility: hidden;
     }
 
-    .input-box{
-        position: absolute;
-        width: 100%;
-        top: 100px;
-    }
-
     input{
         margin: 10px auto;
         width: 80%;
@@ -38,27 +32,5 @@
         &:focus{
             outline: none;
         }
-    }
-
-    .absolute{
-        position: relative;
-    }
-
-    .left {
-        position: absolute;
-        float: left;
-        left: 10%;
-    }
-
-    .right {
-        position: absolute;
-        float: right;
-        right: 10%;
-    }
-
-    .text{
-        border: none;
-        background-color: transparent;
-        font-weight: bold;
     }
 }

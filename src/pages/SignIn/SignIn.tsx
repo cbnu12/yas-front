@@ -17,9 +17,9 @@ const SignIn = () => {
       />
       <input placeholder="이메일" />
       <input placeholder="비밀번호" />
-      <div className="left">
+      <div className="sign-in__left">
         <button
-          className="text"
+          className="sign-in__text"
           onClick={() => {
             alert("비밀번호 찾기");
           }}
@@ -27,10 +27,10 @@ const SignIn = () => {
           비밀번호 찾기
         </button>
       </div>
-      <div className="right">
+      <div className="sign-in__right">
         아직 회원이 아니신가요?
         <button
-          className="text"
+          className="sign-in__text"
           onClick={() => {
             alert("회원가입 하기");
           }}
