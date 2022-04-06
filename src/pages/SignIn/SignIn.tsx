@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import ErrorBar from "../../common/ErrorBar";
 import Modal from "../../common/Modal";
+
+import "./SignIn.scss";
 
 const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -10,9 +13,12 @@ const SignIn = () => {
       onClick={() => {
         alert("로그인");
       }}
-      errorIcon="warning"
-      errorMessage={errorMessage}
     >
+      <ErrorBar
+        className="sign-in__error"
+        message={errorMessage}
+        icon="warning"
+      />
       <input placeholder="이메일" />
       <input placeholder="비밀번호" />
       <div className="left">
