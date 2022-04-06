@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BottomButton from "../../common/BottomButton";
 import ErrorBar from "../../common/ErrorBar";
 import Modal from "../../common/Modal";
 
@@ -8,12 +9,7 @@ const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
 
   return (
-    <Modal
-      buttonText="로그인"
-      onClick={() => {
-        alert("로그인");
-      }}
-    >
+    <Modal>
       <ErrorBar
         className="sign-in__error"
         message={errorMessage}
@@ -42,6 +38,13 @@ const SignIn = () => {
           회원가입 하기
         </button>
       </div>
+      <BottomButton
+        className="sign-in__submit"
+        text="로그인"
+        onClick={() => {
+          alert("로그인");
+        }}
+      />
     </Modal>
   );
 };
