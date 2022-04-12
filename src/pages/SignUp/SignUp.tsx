@@ -101,8 +101,15 @@ const SignUp = () => {
             ))}
           </div>
           <BottomButton
-            className="sign-up__next-button"
+            className="sign-up__prev-button"
             text={"이전 단계"}
+            onClick={() => {
+              setStep(0);
+            }}
+          />
+          <BottomButton
+            className="sign-up__submit-button"
+            text={"회원가입"}
             onClick={() => {
               setStep(0);
             }}

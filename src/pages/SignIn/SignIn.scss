@@ -1,3 +1,5 @@
+@import "../../color.scss";
+
 .sign-in {
     &__error{
         margin: 30px auto;
@@ -5,6 +7,7 @@
 
     &__submit {
         border-radius: 0px 0px 50px 50px;
+        background-color: $confirm-color;
     }
     
     &__left {
