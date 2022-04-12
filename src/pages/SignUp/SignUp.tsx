@@ -1,4 +1,4 @@
-import { Tag, Typography } from "antd";
+import { Card, Tag, Typography } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BottomButton from "../../common/BottomButton";
@@ -51,9 +51,13 @@ const SignUp = () => {
           navigate("/signIn");
         }}
       />
-      <ErrorBar className="sign-up__error" icon={icon} message={errorMessage} />
       {step === 0 && (
         <>
+          <ErrorBar
+            className="sign-up__error"
+            icon={icon}
+            message={errorMessage}
+          />
           <UnderlineInput placeholder="이메일" type="email" />
           <UnderlineInput placeholder="닉네임" />
           <UnderlineInput placeholder="비밀번호" type="password" />
@@ -72,15 +76,15 @@ const SignUp = () => {
       )}
       {step === 1 && (
         <>
-          직종
-          <div>
+          <p className="sign-up__title">직종</p>
+          <div className="sign-up__job-group">
             {signUpInfo.jobGroup.map((item) => (
               <Tag key={item.color} color={`#${item.color}`}>
                 <Typography.Text strong>#{item.hashtag}</Typography.Text>
               </Tag>
             ))}
           </div>
-          <div>
+          <div className="sign-up__job-group-box">
             {data.map((item) => (
               <Tag
                 key={item.color}
