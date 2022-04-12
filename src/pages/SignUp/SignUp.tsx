@@ -111,7 +111,8 @@ const SignUp = () => {
             className="sign-up__submit-button"
             text={"회원가입"}
             onClick={() => {
-              setStep(0);
+              alert("회원가입");
+              navigate("/confirmEmail");
             }}
           />
         </>
