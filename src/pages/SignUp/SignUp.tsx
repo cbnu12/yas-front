@@ -1,3 +1,4 @@
+import { Tag, Typography } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BottomButton from "../../common/BottomButton";
@@ -5,14 +6,41 @@ import ErrorBar from "../../common/ErrorBar";
 import Modal from "../../common/Modal";
 import TextButton from "../../common/TextButton";
 import UnderlineInput from "../../common/UnderlineInput";
+import { data } from "./data";
 
 import "./SignUp.scss";
+
+interface SignUpInfoType {
+  email: string;
+  nickname: string;
+  password: string;
+  confirmPassword: string;
+  birthYear: number;
+  optionBirthYear: boolean;
+  career: number;
+  optionCareer: boolean;
+  jobGroup: { color: string; hashtag: string }[];
+}
+
+const initialValue: SignUpInfoType = {
+  email: "",
+  nickname: "",
+  password: "",
+  confirmPassword: "",
+  birthYear: 0,
+  optionBirthYear: false,
+  career: 0,
+  optionCareer: false,
+  jobGroup: [],
+};
 
 const SignUp = () => {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [icon, setIcon] = useState<string>("");
   const [step, setStep] = useState<number>(0);
+
+  const [signUpInfo, setSignUpInfo] = useState<SignUpInfoType>(initialValue);
 
   return (
     <Modal className="sign-up">
@@ -45,8 +73,29 @@ const SignUp = () => {
       {step === 1 && (
         <>
           직종
-          <div></div>
-          <div></div>
+          <div>
+            {signUpInfo.jobGroup.map((item) => (
+              <Tag key={item.color} color={`#${item.color}`}>
+                <Typography.Text strong>#{item.hashtag}</Typography.Text>
+              </Tag>
+            ))}
+          </div>
+          <div>
+            {data.map((item) => (
+              <Tag
+                key={item.color}
+                color={`#${item.color}`}
+                onClick={() => {
+                  setSignUpInfo({
+                    ...signUpInfo,
+                    jobGroup: [...signUpInfo.jobGroup, item],
+                  });
+                }}
+              >
+                <Typography.Text strong>#{item.hashtag}</Typography.Text>
+              </Tag>
+            ))}
+          </div>
           <BottomButton
             className="sign-up__next-button"
             text={"이전 단계"}
