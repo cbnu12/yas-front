@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BottomButton from "../../common/BottomButton";
 import ErrorBar from "../../common/ErrorBar";
 import Modal from "../../common/Modal";
@@ -8,6 +9,7 @@ import UnderlineInput from "../../common/UnderlineInput";
 import "./SignUp.scss";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [icon, setIcon] = useState<string>("");
   const [step, setStep] = useState<number>(0);
@@ -18,7 +20,7 @@ const SignUp = () => {
         className="left text"
         text="로그인 하기"
         onClick={() => {
-          alert("/signIn 이동");
+          navigate("/signIn");
         }}
       />
       <ErrorBar className="sign-up__error" icon={icon} message={errorMessage} />

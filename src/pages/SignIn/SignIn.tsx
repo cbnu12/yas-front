@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BottomButton from "../../common/BottomButton";
 import ErrorBar from "../../common/ErrorBar";
 import Modal from "../../common/Modal";
@@ -8,6 +9,7 @@ import UnderlineInput from "../../common/UnderlineInput";
 import "./SignIn.scss";
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState<string>("");
 
   return (
@@ -23,7 +25,7 @@ const SignIn = () => {
         <TextButton
           text="비밀번호 찾기"
           onClick={() => {
-            alert("비밀번호 찾기");
+            navigate("/findPassword");
           }}
         />
       </div>
@@ -32,7 +34,7 @@ const SignIn = () => {
         <TextButton
           text="회원가입 하기"
           onClick={() => {
-            alert("회원가입 하기");
+            navigate("/signUp");
           }}
         />
       </div>
