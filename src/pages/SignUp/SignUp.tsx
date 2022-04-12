@@ -17,8 +17,8 @@ const SignUp = () => {
   return (
     <Modal className="sign-up">
       <TextButton
-        className="left text"
-        text="로그인 하기"
+        className="left text sign-up__login-button"
+        text="< 로그인 하기"
         onClick={() => {
           navigate("/signIn");
         }}
