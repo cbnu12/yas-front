@@ -1,0 +1,12 @@
+.custom {
+    margin: 2px !important;
+    border-radius: 5px !important;
+    
+    span{
+        color: black !important;
+
+        span{
+            margin-left: 5px;
+        }
+    }
+}

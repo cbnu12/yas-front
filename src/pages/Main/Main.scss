@@ -1,0 +1,13 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #E5E5E5;
+
+    &__team-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
