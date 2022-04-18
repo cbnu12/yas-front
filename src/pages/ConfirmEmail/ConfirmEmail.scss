@@ -1,0 +1,25 @@
+@import "../../color.scss";
+
+.confirm-email{
+    height: 400px;
+
+    &__submit-button{
+        background-color: $confirm-color;
+        border-radius: 0px 0px 50px 50px;
+    }
+
+    &__code{
+        margin-top: 50px;
+    }
+
+    &__error{
+        margin: 40px auto;
+    }
+
+    &__desc{
+        font-size: 12px;
+        float: right;
+        margin-right: 10%;
+        font-weight: bold;
+    }
+}
