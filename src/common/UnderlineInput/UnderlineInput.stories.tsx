@@ -1,14 +1,15 @@
-import React from "react";
+import { Meta, Story } from "@storybook/react";
 import UnderlineInput from "./UnderlineInput";
 
 export default {
   component: UnderlineInput,
   title: "00. Common / Underline Input",
-};
+} as Meta;
 
-const Template = (args: { placeholder: string; type: string }) => (
-  <UnderlineInput {...args} />
-);
+const Template: Story<{ placeholder: string; type: string }> = (args: {
+  placeholder: string;
+  type: string;
+}) => <UnderlineInput {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

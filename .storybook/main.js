@@ -8,8 +8,4 @@ module.exports = {
     "storybook-addon-customize-antd-theme",
     "@storybook/preset-create-react-app",
   ],
-  framework: "@storybook/react",
-  core: {
-    builder: "@storybook/builder-webpack5",
-  },
 };

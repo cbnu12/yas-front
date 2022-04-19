@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 6006 -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/manager-webpack5": "^6.5.0-alpha.64",
     "@storybook/preset-ant-design": "0.0.2",
     "@storybook/react": "^6.4.19",
     "storybook-addon-customize-antd-theme": "^1.1.0",
