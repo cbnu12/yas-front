@@ -1,6 +1,6 @@
 import { SearchOutlined } from "@ant-design/icons";
-import { Select } from "antd";
 import HashTag from "../../../../common/HashTag";
+import Select from "../../../../common/Select";
 
 import "./SearchInput.scss";
 
@@ -9,15 +9,16 @@ interface Props {
 }
 
 const SearchInput = ({ tagList }: Props) => {
-  const { Option } = Select;
-
   return (
     <div className="main__search-input">
       <div className="main__search-input__input-container">
-        <Select defaultValue={"그룹명"}>
-          <Option>그룹명</Option>
-          <Option>해시태그</Option>
-        </Select>
+        <Select
+          defaultValue="그룹명"
+          options={[
+            { value: "groupName", name: "그룹명" },
+            { value: "hashTag", name: "해시태그" },
+          ]}
+        />
         <div className="main__search-input__input-container__box">
           <SearchOutlined className="search-icon" />
           <input placeholder="그룹명, 해시태그 검색" />
