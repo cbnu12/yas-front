@@ -2,7 +2,11 @@
 
 .sign-in {
     &__error{
-        margin: 30px auto;
+        margin: 15px auto;
+    }
+
+    &__back-button{
+        margin: 20px 0px 0px 20px;
     }
 
     &__submit {
