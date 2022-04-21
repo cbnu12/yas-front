@@ -1,5 +1,4 @@
-.main__search-input{
-    
+.search-input{
     &__input-container {
         width: 80%;
         margin: auto;
@@ -26,6 +25,7 @@
                 font-size: 15px;
                 padding: 5px 20px;
                 text-align: center;
+                box-shadow: 15px 15px 15px rgba(0,0,0,0.1);
             }
             
         }

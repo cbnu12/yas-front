@@ -1,11 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useState, MouseEvent } from "react";
+import { useState } from "react";
 import { Button, Layout } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
-import SearchInput from "./components/SearchInput";
-import MainView from "./Main.view";
-import { MainListData, tagList } from "./data/data";
-import SortInput from "./components/SortInput";
+import MainList from "./components/MainList";
 
 import "./Main.scss";
 
@@ -17,38 +14,31 @@ const Main = () => {
 
   return (
     <>
-      <Layout>
-        {showSider && (
-          <>
-            <div
-              className="main__sider__box"
-              onClick={() => setShowSider(false)}
-            />
-            <Sider className="main__sider" width="300">
-              <Button
-                className="main__sider__button"
-                shape="round"
-                onClick={() => {
-                  navigate("/signIn");
-                }}
-              >
-                로그인 하기
-              </Button>
-            </Sider>
-          </>
-        )}
-        <Content>
-          <div className="main">
-            <MenuOutlined
-              className="main__menu"
-              onClick={() => setShowSider(!showSider)}
-            />
-            <SearchInput tagList={tagList} />
-            <SortInput />
-            <MainView list={MainListData} />
+      {showSider && (
+        <>
+          <div
+            className="main__sider__background"
+            onClick={() => setShowSider(false)}
+          />
+          <div className="main__sider__box">
+            <Button
+              size="large"
+              className="main__sider__button"
+              shape="round"
+              onClick={() => {
+                navigate("/signIn");
+              }}
+            >
+              로그인 하기
+            </Button>
           </div>
-        </Content>
-      </Layout>
+        </>
+      )}
+      <MenuOutlined
+        className="main__menu"
+        onClick={() => setShowSider(!showSider)}
+      />
+      <MainList />
     </>
   );
 };

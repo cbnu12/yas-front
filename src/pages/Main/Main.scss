@@ -1,12 +1,15 @@
 .main {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    background-color: #E5E5E5;
-
     &__sider {
-        background-color: white !important;
-        z-index: 2;
+        &__box{
+            position: fixed;
+            background-color: white;
+            z-index: 5;
+            height: 100%;
+            width: 300px;
+            top: 0;
+            left: 0;
+            border-radius: 0px 0px 30px 0px;
+        }
         
         &__button{
             display: block;
@@ -15,7 +18,7 @@
             left: 50%;
         }
 
-        &__box {
+        &__background {
             background-color: black;
             opacity: 0.5;
             width: 100%;
@@ -23,20 +26,16 @@
             position: fixed;
             top: 0px;
             left: 0px;
-            z-index: 1;
+            z-index: 4;
+            overflow: hidden;
         }
     }
 
     &__menu {
+        position: fixed;
+        top: 10px;
+        left: 10px;
         font-size: 30px;
         padding: 10px;
-        float: left;
-    }
-
-    &__team-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
     }
 }

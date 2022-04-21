@@ -7,9 +7,10 @@ export interface Props {
   defaultValue: string;
   options: { value: string; name: string }[];
   onChange?: (value: string) => void;
+  className?: string;
 }
 
-const Select = ({ defaultValue, onChange, options }: Props) => {
+const Select = ({ defaultValue, onChange, options, className }: Props) => {
   const [selectedValue, setSelectedValue] = useState<string>(defaultValue);
   const [showOptions, setShowOptions] = useState<boolean>(false);
 
@@ -23,7 +24,7 @@ const Select = ({ defaultValue, onChange, options }: Props) => {
   };
 
   return (
-    <div className="select-box">
+    <div className={`select-box ${className}`}>
       <div
         className="select-box__select"
         onClick={() => {
