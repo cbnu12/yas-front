@@ -1,10 +1,10 @@
-import React from "react";
+import { Meta } from "@storybook/react";
 import SignIn from "./SignIn";
 
 export default {
   component: SignIn,
-  title: "02. 로그인 화면",
-};
+  title: "01. Pages / 로그인 화면",
+} as Meta;
 
 const Template = (args: any) => <SignIn {...args} />;
 

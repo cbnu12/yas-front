@@ -1,6 +1,7 @@
 import { Card, Tag, Typography } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { signUp } from "../../api/user";
 import BottomButton from "../../common/BottomButton";
 import ErrorBar from "../../common/ErrorBar";
 import Modal from "../../common/Modal";
@@ -10,7 +11,7 @@ import { data } from "./data";
 
 import "./SignUp.scss";
 
-interface SignUpInfoType {
+interface FormType {
   email: string;
   nickname: string;
   password: string;
@@ -22,7 +23,7 @@ interface SignUpInfoType {
   jobGroup: { color: string; hashtag: string }[];
 }
 
-const initialValue: SignUpInfoType = {
+const initialValue: FormType = {
   email: "",
   nickname: "",
   password: "",
@@ -36,11 +37,10 @@ const initialValue: SignUpInfoType = {
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const [form, setForm] = useState<FormType>(initialValue);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [icon, setIcon] = useState<string>("");
   const [step, setStep] = useState<number>(0);
-
-  const [signUpInfo, setSignUpInfo] = useState<SignUpInfoType>(initialValue);
 
   return (
     <Modal className="sign-up">
@@ -78,7 +78,7 @@ const SignUp = () => {
         <>
           <p className="sign-up__title">직종</p>
           <div className="sign-up__job-group">
-            {signUpInfo.jobGroup.map((item) => (
+            {form.jobGroup.map((item) => (
               <Tag key={item.color} color={`#${item.color}`}>
                 <Typography.Text strong>#{item.hashtag}</Typography.Text>
               </Tag>
@@ -90,9 +90,9 @@ const SignUp = () => {
                 key={item.color}
                 color={`#${item.color}`}
                 onClick={() => {
-                  setSignUpInfo({
-                    ...signUpInfo,
-                    jobGroup: [...signUpInfo.jobGroup, item],
+                  setForm({
+                    ...form,
+                    jobGroup: [...form.jobGroup, item],
                   });
                 }}
               >
@@ -111,7 +111,7 @@ const SignUp = () => {
             className="sign-up__submit-button"
             text={"회원가입"}
             onClick={() => {
-              alert("회원가입");
+              // signUp(form);
               navigate("/confirmEmail");
             }}
           />

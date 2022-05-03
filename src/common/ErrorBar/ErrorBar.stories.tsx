@@ -1,14 +1,15 @@
-import React from "react";
+import { Meta, Story } from "@storybook/react";
 import ErrorBar from "./ErrorBar";
 
 export default {
   component: ErrorBar,
   title: "00. Common / Error Bar",
-};
+} as Meta;
 
-const Template = (args: { message: string; icon: string }) => (
-  <ErrorBar {...args} />
-);
+const Template: Story<{ message: string; icon: string }> = (args: {
+  message: string;
+  icon: string;
+}) => <ErrorBar {...args} />;
 
 export const Warning = Template.bind({});
 Warning.args = {
