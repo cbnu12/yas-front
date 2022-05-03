@@ -1,29 +1,45 @@
-import React from "react";
-import SearchInput from "./components/SearchInput";
-import MainView from "./Main.view";
-import { MainListData, tagList } from "./data/data";
-import SortInput from "./components/SortInput";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Button, Layout } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+import MainList from "./components/MainList";
 
 import "./Main.scss";
-import { useNavigate } from "react-router-dom";
-import { Button } from "antd";
+
+const { Sider, Content } = Layout;
 
 const Main = () => {
   const navigate = useNavigate();
+  const [showSider, setShowSider] = useState<boolean>(false);
 
   return (
-    <div className="main">
-      <Button
-        onClick={() => {
-          navigate("/signIn");
-        }}
-      >
-        로그인 하기
-      </Button>
-      <SearchInput tagList={tagList} />
-      <SortInput />
-      <MainView list={MainListData} />
-    </div>
+    <>
+      {showSider && (
+        <>
+          <div
+            className="main__sider__background"
+            onClick={() => setShowSider(false)}
+          />
+          <div className="main__sider__box">
+            <Button
+              size="large"
+              className="main__sider__button"
+              shape="round"
+              onClick={() => {
+                navigate("/signIn");
+              }}
+            >
+              로그인 하기
+            </Button>
+          </div>
+        </>
+      )}
+      <MenuOutlined
+        className="main__menu"
+        onClick={() => setShowSider(!showSider)}
+      />
+      <MainList />
+    </>
   );
 };
 

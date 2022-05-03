@@ -25,6 +25,13 @@ const SignIn = () => {
 
   return (
     <Modal>
+      <TextButton
+        className="left sign-in__back-button"
+        text="< 뒤로 가기"
+        onClick={() => {
+          navigate("/");
+        }}
+      />
       <ErrorBar
         className="sign-in__error"
         message={errorMessage}

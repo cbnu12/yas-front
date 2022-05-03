@@ -1,6 +1,4 @@
 import { UserOutlined } from "@ant-design/icons";
-import { Tag, Typography } from "antd";
-import React from "react";
 import HashTag from "../../../../common/HashTag";
 import { TeamItemType } from "../../data/data";
 
@@ -13,13 +11,13 @@ interface Props {
 const MainItem = ({ item }: Props) => {
   const { name, currentMember, totalMember, hashtagList } = item;
   return (
-    <div className="main__team-item">
-      <div className="main__team-item__number">
+    <div className="main-item">
+      <div className="main-item__number">
         <UserOutlined />
         {currentMember}/{totalMember}
       </div>
-      <div className="main__team-item__title">{name}</div>
-      <div className="main__team-item__hashtag">
+      <div className="main-item__title">{name}</div>
+      <div className="main-item__hashtag">
         {hashtagList.map((item) => (
           <HashTag hashtag={item.hashtag} color={item.color} />
         ))}

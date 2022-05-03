@@ -4,7 +4,7 @@ import { Tag, Typography } from "antd";
 import "./HashTag.scss";
 import { CloseCircleOutlined } from "@ant-design/icons";
 
-interface Props {
+export interface Props {
   hashtag: string;
   color: string;
   icon?: string;
