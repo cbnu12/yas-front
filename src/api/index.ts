@@ -16,10 +16,13 @@ const axiosInstance = axios.create({
 // };
 
 axiosInstance.interceptors.request.use(
-    (req) => {
-        // if(!accessToken){
-        //   getAccessToken();
+    (req) => {        
+        // if (isExpired(token)) {
+        //     token = await getAccessToken();
+        //     setToken(token);
         // }
+        
+        // Headers.Authorization = `Bearer ${token}`
         return req;
     },
     (error) => {
