@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getAccessToken } from './token';
 
 interface BaseResponse<T> {
     data: T,
@@ -16,6 +17,9 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
     (req) => {
+        // if(!accessToken){
+        //   getAccessToken();
+        // }
         return req;
     },
     (error) => {
