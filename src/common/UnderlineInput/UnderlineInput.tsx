@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { ChangeEvent } from "react";
 import "./UnderlineInput.scss";
 
@@ -20,7 +21,8 @@ const UnderlineInput = ({
 }: Props) => {
   return (
     <input
-      className={`underline-input ${className}`}
+      aria-label={name}
+      className={classNames("underline-input", className)}
       type={type}
       placeholder={placeholder}
       value={value}
