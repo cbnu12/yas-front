@@ -20,7 +20,6 @@ const customRender = (
         navigator={createMemoryHistory({ initialEntries: [route] })}
       >
         <Routes>
-          보이니
           <Route path={path} element={children} />
         </Routes>
       </Router>
