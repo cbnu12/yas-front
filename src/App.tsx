@@ -16,7 +16,7 @@ function App() {
       <Route path="/findPassword" element={<FindPassword />} />
       <Route path="/confirmEmail" element={<ConfirmEmail />} />
 
-      <Route path="/team/:id" element={<TeamDetail />} />
+      <Route path="/team/:id/:tab" element={<TeamDetail />} />
 
       <Route path="/" element={<Main />} />
     </Routes>
