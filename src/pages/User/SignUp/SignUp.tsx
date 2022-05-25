@@ -1,12 +1,12 @@
-import { Card, Tag, Typography } from "antd";
+import { Tag, Typography } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signUp } from "../../api/user";
-import BottomButton from "../../common/BottomButton";
-import ErrorBar from "../../common/ErrorBar";
-import Modal from "../../common/Modal";
-import TextButton from "../../common/TextButton";
-import UnderlineInput from "../../common/UnderlineInput";
+import { signUp } from "../../../api/user";
+import BottomButton from "../../../common/BottomButton";
+import ErrorBar from "../../../common/ErrorBar";
+import Modal from "../../../common/Modal";
+import TextButton from "../../../common/TextButton";
+import UnderlineInput from "../../../common/UnderlineInput";
 import { data } from "./data";
 
 import "./SignUp.scss";

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { findPassword } from "../../api/user";
-import BottomButton from "../../common/BottomButton";
-import ErrorBar from "../../common/ErrorBar";
-import Modal from "../../common/Modal";
-import TextButton from "../../common/TextButton";
-import UnderlineInput from "../../common/UnderlineInput";
+import { findPassword } from "../../../api/user";
+import BottomButton from "../../../common/BottomButton";
+import ErrorBar from "../../../common/ErrorBar";
+import Modal from "../../../common/Modal";
+import TextButton from "../../../common/TextButton";
+import UnderlineInput from "../../../common/UnderlineInput";
 
 import "./FindPassword.scss";
 

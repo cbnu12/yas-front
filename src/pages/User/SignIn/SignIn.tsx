@@ -1,11 +1,11 @@
 import React, { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signIn } from "../../api/user";
-import BottomButton from "../../common/BottomButton";
-import ErrorBar from "../../common/ErrorBar";
-import Modal from "../../common/Modal";
-import TextButton from "../../common/TextButton";
-import UnderlineInput from "../../common/UnderlineInput";
+import { getToken } from "../../../api/token";
+import BottomButton from "../../../common/BottomButton";
+import ErrorBar from "../../../common/ErrorBar";
+import Modal from "../../../common/Modal";
+import TextButton from "../../../common/TextButton";
+import UnderlineInput from "../../../common/UnderlineInput";
 
 import "./SignIn.scss";
 
@@ -72,7 +72,8 @@ const SignIn = () => {
         className="sign-in__submit"
         text="로그인"
         onClick={() => {
-          signIn(form);
+          // getToken(form);
+          navigate("/");
         }}
       />
     </Modal>
