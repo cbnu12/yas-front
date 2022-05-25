@@ -1,15 +1,6 @@
 import axiosInstance from ".";
 import { apiUserUrls } from "./url";
 
-interface SignInBodyParams {
-    email: string;
-    password: string;
-}
-
-export const signIn = ({ email, password }: SignInBodyParams) => {
-    axiosInstance.post(apiUserUrls.signIn());
-}
-
 interface SignUpBodyParams {
 	email: string;
 	nickname: string;
@@ -22,7 +13,8 @@ interface SignUpBodyParams {
 }
 
 export const signUp = (bodyParams: SignUpBodyParams) => {
-    axiosInstance.post(apiUserUrls.signUp());
+    axiosInstance.post(apiUserUrls.signUp(), bodyParams)
+        .then(res => res.data);
 }
 
 interface CheckNicknameBodyParams {
@@ -30,7 +22,8 @@ interface CheckNicknameBodyParams {
 }
 
 export const checkNickname = ({ nickname }: CheckNicknameBodyParams) => {
-    axiosInstance.get(apiUserUrls.checkNickname());
+    axiosInstance.get(apiUserUrls.checkNickname())
+        .then(res => res.data);
 }
 
 interface ConfirmEmailBodyParams {
@@ -38,7 +31,8 @@ interface ConfirmEmailBodyParams {
 }
 
 export const confirmEmail = ({ code }: ConfirmEmailBodyParams) => {
-    axiosInstance.get(apiUserUrls.confirmEmail());
+    axiosInstance.get(apiUserUrls.confirmEmail())
+        .then(res => res.data);
 }
 
 interface FindPasswordBodyParams {
@@ -46,5 +40,6 @@ interface FindPasswordBodyParams {
 }
 
 export const findPassword = ({ email }: FindPasswordBodyParams) => {
-    axiosInstance.post(apiUserUrls.findPassword());
+    axiosInstance.post(apiUserUrls.findPassword(), email)
+        .then(res => res.data);
 }   
