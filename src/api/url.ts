@@ -6,9 +6,9 @@ export const apiTokenUrls = {
 }
 
 export const apiUserUrls = {
-    signIn: () => "",
-    signUp: () => "",
-    checkNickname: () => "",
-    confirmEmail: () => "",
-    findPassword: () => "",
+    signIn: () => `${BASE_URL}/`,
+    signUp: () => `${BASE_URL}/`,
+    checkNickname: () => `${BASE_URL}/`,
+    confirmEmail: () => `${BASE_URL}/`,
+    findPassword: () => `${BASE_URL}/`,
 }
