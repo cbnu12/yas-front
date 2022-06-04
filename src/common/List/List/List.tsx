@@ -1,19 +1,26 @@
 import ListItem from "../ListItem";
 
-export interface Props {
+import "./List.scss";
+
+export interface ListProps {
+  labelList: string[];
   list: {
     index: number;
     title: string;
     writer: string;
     createdDate: string;
-    commentCount: number;
+    commentCount?: number;
   }[];
 }
 
-const List = ({ list }: Props) => {
+const List = ({ labelList, list }: ListProps) => {
   return (
-    <div className="">
-      <div className=""></div>
+    <div className="list">
+      <div className="list__label">
+        {labelList.map((label) => (
+          <span className="list__label__item">{label}</span>
+        ))}
+      </div>
       {list.map((item) => (
         <ListItem
           key={item.index}

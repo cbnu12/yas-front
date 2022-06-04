@@ -3,7 +3,7 @@ import React from "react";
 
 import "./ListItem.scss";
 
-interface Props {
+export interface ListItemProps {
   index: number;
   title: string;
   writer: string;
@@ -17,7 +17,7 @@ const ListItem = ({
   writer,
   createdDate,
   commentCount,
-}: Props) => {
+}: ListItemProps) => {
   return (
     <div className="list-item">
       <span className="list-item__index">{index}</span>

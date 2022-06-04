@@ -1,11 +1,12 @@
 import { Meta } from "@storybook/react";
 import List from "./List";
-import { Props } from "./List/List";
+import { ListProps } from "./List/List";
 
 export default {
   component: List,
   title: "00. Common / List",
   args: {
+    labelList: ["번호", "제목", "작성자", "작성일"],
     list: [
       {
         index: 1,
@@ -29,7 +30,7 @@ export default {
       },
     ],
   },
-} as Meta<Props>;
+} as Meta<ListProps>;
 
 const Template = (args: any) => <List {...args} />;
 
