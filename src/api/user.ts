@@ -1,4 +1,5 @@
-// import axios from 'axios';
+import axiosInstance from ".";
+import { apiUserUrls } from "./url";
 
 interface SignInBodyParams {
     email: string;
@@ -6,7 +7,7 @@ interface SignInBodyParams {
 }
 
 export const signIn = ({ email, password }: SignInBodyParams) => {
-    console.log(email, password);
+    axiosInstance.post(apiUserUrls.signIn());
 }
 
 interface SignUpBodyParams {
@@ -21,7 +22,7 @@ interface SignUpBodyParams {
 }
 
 export const signUp = (bodyParams: SignUpBodyParams) => {
-    console.log(bodyParams);
+    axiosInstance.post(apiUserUrls.signUp());
 }
 
 interface CheckNicknameBodyParams {
@@ -29,7 +30,7 @@ interface CheckNicknameBodyParams {
 }
 
 export const checkNickname = ({ nickname }: CheckNicknameBodyParams) => {
-    console.log(nickname);
+    axiosInstance.get(apiUserUrls.checkNickname());
 }
 
 interface ConfirmEmailBodyParams {
@@ -37,7 +38,7 @@ interface ConfirmEmailBodyParams {
 }
 
 export const confirmEmail = ({ code }: ConfirmEmailBodyParams) => {
-    console.log(code);
+    axiosInstance.get(apiUserUrls.confirmEmail());
 }
 
 interface FindPasswordBodyParams {
@@ -45,5 +46,5 @@ interface FindPasswordBodyParams {
 }
 
 export const findPassword = ({ email }: FindPasswordBodyParams) => {
-    console.log(email);
+    axiosInstance.post(apiUserUrls.findPassword());
 }   
