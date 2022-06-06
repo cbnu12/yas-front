@@ -24,29 +24,31 @@ const TeamDetail = () => {
   console.log(id, tab);
 
   return (
-    <div className="team-detail">
-      <div className="team-detail__name">{name}</div>
-      <div className="team-detail__tab-list">
-        {tabList.map((item) => (
-          <span
-            className={`team-detail__tab-list__item${
-              tab === item.link ? " active" : ""
-            }`}
-            key={item.name}
-            onClick={() => {
-              navigate(`/team/${id}/${item.link}`);
-            }}
-          >
-            {item.name}
-          </span>
-        ))}
-      </div>
-      <div className="team-detail__tab-container">
-        {tab === "information" && <Information />}
-        {tab === "notice" && <TeamNotice />}
-        {tab === "chat" && <TeamChat />}
-        {tab === "calendar" && <Calendar />}
-        {tab === "photo" && <TeamPhoto />}
+    <div className="team-detail__container">
+      <div className="team-detail">
+        <div className="team-detail__name">{name}</div>
+        <div className="team-detail__tab-list">
+          {tabList.map((item) => (
+            <span
+              className={`team-detail__tab-list__item${
+                tab === item.link ? " active" : ""
+              }`}
+              key={item.name}
+              onClick={() => {
+                navigate(`/team/${id}/${item.link}`);
+              }}
+            >
+              {item.name}
+            </span>
+          ))}
+        </div>
+        <div className="team-detail__tab-container">
+          {tab === "information" && <Information />}
+          {tab === "notice" && <TeamNotice />}
+          {tab === "chat" && <TeamChat />}
+          {tab === "calendar" && <Calendar />}
+          {tab === "photo" && <TeamPhoto />}
+        </div>
       </div>
     </div>
   );
