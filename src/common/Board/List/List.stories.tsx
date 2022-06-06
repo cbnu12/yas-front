@@ -1,10 +1,10 @@
 import { Meta } from "@storybook/react";
 import List from "./List";
-import { ListProps } from "./List/List";
+import { ListProps } from "./List";
 
 export default {
   component: List,
-  title: "00. Common / List",
+  title: "00. Common / Board / List",
   args: {
     labelList: ["번호", "제목", "작성자", "작성일"],
     list: [
