@@ -9,6 +9,7 @@ export interface ListItemProps {
   writer: string;
   createdDate: string;
   commentCount?: number;
+  onClick: () => void;
 }
 
 const ListItem = ({
@@ -17,9 +18,10 @@ const ListItem = ({
   writer,
   createdDate,
   commentCount,
+  onClick,
 }: ListItemProps) => {
   return (
-    <div className="list-item">
+    <div className="list-item" onClick={onClick}>
       <span className="list-item__index">{index}</span>
       <span className="list-item__title">{title}</span>
       <span className="list-item__writer">{writer}</span>
