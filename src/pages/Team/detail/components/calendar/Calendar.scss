@@ -1,0 +1,62 @@
+.team-calendar{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    &__history, &__detail, &__report{
+        width: 30%;
+        min-width: 200px;
+        padding: 5px;
+    }
+}
+
+.calendar-detail-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__time{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        border-right: 1px solid black;
+    }
+
+    &__attendees{
+        width: 100%;
+        margin: 10px;
+
+        img{
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            
+            border-radius: 50%;
+        }
+    }
+}
+
+.calendar-detail-metting{
+    text-align: center;
+    &__attendess{
+        width: 100%;
+        margin: 10px;
+
+        img{
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            
+            border-radius: 50%;
+        }
+    }
+    &__title{
+        margin: 20px auto;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    &__content{
+        font-size: 15px;
+    }
+}

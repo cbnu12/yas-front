@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { confirmEmail } from "../../api/user";
-import BottomButton from "../../common/BottomButton";
-import ErrorBar from "../../common/ErrorBar";
-import Modal from "../../common/Modal";
-import UnderlineInput from "../../common/UnderlineInput";
+import { confirmEmail } from "../../../api/user";
+import BottomButton from "../../../common/BottomButton";
+import ErrorBar from "../../../common/ErrorBar";
+import Modal from "../../../common/Modal";
+import UnderlineInput from "../../../common/UnderlineInput";
 
 import "./ConfirmEmail.scss";
 

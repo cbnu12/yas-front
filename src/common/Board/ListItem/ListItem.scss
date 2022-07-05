@@ -1,0 +1,38 @@
+.list-item{
+    width: 100%;
+    height: 60px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 1px solid #C1C1C1;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #656565;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__index{
+        width: 5%;
+    }
+
+    &__title{
+        width: 50%;
+    }
+
+    &__writer{
+        width: 20%;
+    }
+
+    &__created-date{
+        width: 20%;
+    }
+
+    &__comment-count{
+        width: 5%;
+
+        & span{
+            margin-left: 5px;
+        }
+    }
+}

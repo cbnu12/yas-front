@@ -1,0 +1,26 @@
+.comment-list-item{
+    border: 1px solid #c1c1c1;
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__sub{
+        width: 110px;
+        text-align: center;
+
+        &__writer{
+            font-weight: bold;
+        }
+        &__date{
+            font-size: 10px;
+        }
+    }
+    &__main{
+        width: calc(100% - 120px);
+
+    }
+}

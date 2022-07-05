@@ -23,7 +23,7 @@ axiosInstance.interceptors.request.use(
             setToken(token);
         }
         
-        req.headers.Authorization = getToken();
+        // req.headers.Authorization = getToken();
         return req;
     },
     (error) => {
