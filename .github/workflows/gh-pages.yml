@@ -1,9 +1,9 @@
-name: Seong, jinok
+name: 야, 너두 스터디 할 수 있어
 
 on:
   push:
     branches:
-      - develop
+      - feature/github-actions
 
 jobs:
   deploy:
