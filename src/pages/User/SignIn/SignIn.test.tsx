@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import customRender from "../../utils/render";
+import customRender from "../../../utils/render";
 import SignIn from "./SignIn";
 
 describe("로그인 화면", () => {
