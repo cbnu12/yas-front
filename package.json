@@ -58,5 +58,6 @@
     "@storybook/react": "^6.4.19",
     "storybook-addon-customize-antd-theme": "^1.1.0",
     "storybook-addon-sass-postcss": "^0.1.0"
-  }
+  },
+  "homepage": "https://cbnu12.github.io/yas-front/"
 }
