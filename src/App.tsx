@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import SignIn from "./pages/User/SignIn";
 import SignUp from "./pages/User/SignUp";
 import FindPassword from "./pages/User/FindPassword";
