@@ -1,16 +1,18 @@
 import React, { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getToken } from "../../../api/token";
+import { signIn } from "../../../api/token";
 import BottomButton from "../../../common/BottomButton";
 import ErrorBar from "../../../common/ErrorBar";
 import Modal from "../../../common/Modal";
 import TextButton from "../../../common/TextButton";
 import UnderlineInput from "../../../common/UnderlineInput";
+import { useUserDispatch } from "../../../hooks";
 
 import "./SignIn.scss";
 
 const SignIn = () => {
   const navigate = useNavigate();
+  const userDispatch = useUserDispatch();
   const [form, setForm] = useState<{ email: string; password: string }>({
     email: "",
     password: "",
@@ -72,8 +74,24 @@ const SignIn = () => {
         className="sign-in__submit"
         text="로그인"
         onClick={() => {
-          // getToken(form);
-          navigate("/");
+          signIn(form)
+            .then(({ accessToken, refreshToken }) => {
+              userDispatch({
+                type: "SIGN_IN",
+                payload: {
+                  id: "", // TODO
+                  email: form.email,
+                  nickname: "", // TODO
+                  accessToken,
+                  refreshToken,
+                },
+              });
+              navigate("/");
+            })
+            .catch(() => {
+              // TODO: 에러 메세지 학인
+              setErrorMessage("아이디/비밀번호를 확인해주세요.");
+            });
         }}
       />
     </Modal>
