@@ -1,0 +1,24 @@
+.calendar-view {
+    height: 300px;
+
+    .react-datepicker__day-names,
+    .react-datepicker__week {
+        display: flex;
+        width: 100%;
+        height: 36px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .react-datepicker__day-names {
+        margin: 8px 0px;
+        font-weight: 600;
+    }
+
+    .react-datepicker__day-name {
+        width: 36px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(179, 179, 179);
+    }
+}

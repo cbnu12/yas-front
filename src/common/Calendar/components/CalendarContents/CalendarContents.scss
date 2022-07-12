@@ -1,0 +1,38 @@
+.calendar-contents {
+  text-align: center;
+  padding: 2px 0px;
+
+  &__day {
+    width: 36px;
+    height: 36px;
+    margin: auto;
+    font-size: 15px;
+    line-height: 33px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(218, 218, 218);
+    }
+  }
+}
+
+.react-datepicker__day--today {
+  .calendar-contents__day {
+    border: 1.5px solid rgb(255, 193, 60);
+  }
+}
+
+.react-datepicker__day--selected {
+  .calendar-contents__day {
+    background-color: black;
+    color: white;
+  }
+}
+
+.react-datepicker__day--outside-month {
+  .calendar-contents__day {
+    visibility: hidden;
+  }
+}
