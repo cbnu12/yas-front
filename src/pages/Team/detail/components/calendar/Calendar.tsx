@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import CalendarLib from "react-calendar";
+import CalendarView from "../../../../../common/Calendar";
 
-import "react-calendar/dist/Calendar.css";
 import "./Calendar.scss";
 
 interface Props {
@@ -44,6 +43,7 @@ const DetailMeeting = ({ attendees, title, content }: Props2) => {
 
 const Calendar = () => {
   const [date, setDate] = useState<Date>(new Date());
+
   const details = [
     {
       time: "08:30",
@@ -57,7 +57,7 @@ const Calendar = () => {
   return (
     <div className="team-calendar">
       <div className="team-calendar__history">
-        <CalendarLib value={date} onChange={setDate} calendarType="US" />
+        <CalendarView date={date} setDate={setDate} />
       </div>
       <div className="team-calendar__detail">
         {details.map((detail) => (
