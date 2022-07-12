@@ -1,4 +1,4 @@
-const BASE_URL = "http://211.208.125.180:8000/api";
+const BASE_URL = "/api";
 
 export const apiTokenUrls = {
   signIn: () => `${BASE_URL}/signIn`,
