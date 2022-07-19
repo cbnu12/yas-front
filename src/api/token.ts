@@ -1,26 +1,34 @@
 import axios from "axios";
 import { apiTokenUrls } from "./url";
 
-interface GetTokenBodyParams {
-    id: string;
-    email: string;
-    password: string;
+const axiosNoToken = axios.create({
+  timeout: 100000,
+});
+
+interface SignInBodyParams {
+  email: string;
+  password: string;
 }
 
-interface GetTokenResponse {
-    isSuccess: boolean;
-    accessToken: string;
-    refreshToken: string;
+interface SignInResponse {
+  isSuccess: boolean;
+  accessToken: string;
+  refreshToken: string;
 }
 
-export const getToken = async (bodyParams: GetTokenBodyParams) => {
-    await axios.post<GetTokenResponse>(apiTokenUrls.getToken(), bodyParams).then(res => { console.log(res)})
-}
+export const signIn = async (bodyParams: SignInBodyParams) =>
+  await axiosNoToken
+    .post<SignInResponse>(apiTokenUrls.signIn(), bodyParams)
+    .then((res) => res.data);
 
 interface GetAccessTokenBodyParams {
-    refreshToken: string;
+  refreshToken: string;
 }
 
 export const getAccessToken = async (bodyParams: GetAccessTokenBodyParams) => {
-    await axios.post<string>(apiTokenUrls.getAccessToken(), bodyParams).then(res => { console.log(res)})
-}
+  await axiosNoToken
+    .post<string>(apiTokenUrls.getAccessToken(), bodyParams)
+    .then((res) => {
+      console.log(res);
+    });
+};
