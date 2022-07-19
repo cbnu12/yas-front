@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Calendar from "./components/calendar";
+import TeamCalendar from "./components/teamCalendar";
 import Information from "./components/information";
 import TeamChat from "./components/teamChat";
 import TeamNotice from "./components/teamNotice";
@@ -20,8 +20,6 @@ const TeamDetail = () => {
   const navigate = useNavigate();
   const { id, tab } = useParams();
   const name = "이름 입니다.";
-
-  console.log(id, tab);
 
   return (
     <div className="team-detail__container">
@@ -46,7 +44,7 @@ const TeamDetail = () => {
           {tab === "information" && <Information />}
           {tab === "notice" && <TeamNotice />}
           {tab === "chat" && <TeamChat />}
-          {tab === "calendar" && <Calendar />}
+          {tab === "calendar" && <TeamCalendar />}
           {tab === "photo" && <TeamPhoto />}
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CalendarView from "../../../../../common/Calendar";
 
-import "./Calendar.scss";
+import "./TeamCalendar.scss";
 
 interface Props {
   time: string;

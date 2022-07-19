@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Button, Layout } from "antd";
+import { Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import MainList from "./components/MainList";
 
 import "./Main.scss";
-
-const { Sider, Content } = Layout;
 
 const Main = () => {
   const navigate = useNavigate();
@@ -14,6 +12,7 @@ const Main = () => {
 
   return (
     <>
+      <div className="main" />
       {showSider && (
         <>
           <div

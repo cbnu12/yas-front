@@ -1,6 +1,7 @@
 .gallery-list{
-    display: flex;
+    margin: 0;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: start;
 }

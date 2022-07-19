@@ -47,11 +47,7 @@ const TeamPhoto = () => {
     },
   ];
 
-  return (
-    <div className="team-photo">
-      <GalleryList list={list} />
-    </div>
-  );
+  return <GalleryList list={list} />;
 };
 
 export default TeamPhoto;

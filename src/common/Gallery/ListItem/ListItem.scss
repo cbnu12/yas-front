@@ -1,8 +1,9 @@
 .gallery-list-item{
-    width: 250px;
-    height: 150px;
+    flex: 1 1 0;
+    min-width: 250px;
+    height: auto;
     position: relative;
-    margin: 10px 5px;
+    margin: 5px;
 
     &__image{
         width: 100%;
