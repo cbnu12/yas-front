@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Calendar from "./components/calendar";
 import Information from "./components/information";
@@ -20,8 +20,6 @@ const TeamDetail = () => {
   const navigate = useNavigate();
   const { id, tab } = useParams();
   const name = "이름 입니다.";
-
-  console.log(id, tab);
 
   return (
     <div className="team-detail__container">
