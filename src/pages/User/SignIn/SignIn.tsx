@@ -75,15 +75,19 @@ const SignIn = () => {
         text="로그인"
         onClick={() => {
           signIn(form)
-            .then(({ accessToken, refreshToken }) => {
+            .then((res) => {
+              if (!res.isSuccess) {
+                throw new Error("입력하신 정보가 잘못되었습니다.");
+              }
+              // TODO: accessToken으로 유저 정보 조회 하기
               userDispatch({
                 type: "SIGN_IN",
                 payload: {
                   id: "", // TODO
                   email: form.email,
                   nickname: "", // TODO
-                  accessToken,
-                  refreshToken,
+                  accessToken: res.accessToken,
+                  refreshToken: res.refreshToken,
                 },
               });
               navigate("/");
