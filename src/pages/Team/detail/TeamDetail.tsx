@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Calendar from "./components/calendar";
+import TeamCalendar from "./components/teamCalendar";
 import Information from "./components/information";
 import TeamChat from "./components/teamChat";
 import TeamNotice from "./components/teamNotice";
@@ -44,7 +44,7 @@ const TeamDetail = () => {
           {tab === "information" && <Information />}
           {tab === "notice" && <TeamNotice />}
           {tab === "chat" && <TeamChat />}
-          {tab === "calendar" && <Calendar />}
+          {tab === "calendar" && <TeamCalendar />}
           {tab === "photo" && <TeamPhoto />}
         </div>
       </div>
