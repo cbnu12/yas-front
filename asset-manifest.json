@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/yas-front/static/css/main.72f7cd2c.css",
-    "main.js": "/yas-front/static/js/main.f79f581b.js",
+    "main.css": "/yas-front/static/css/main.f76b21b6.css",
+    "main.js": "/yas-front/static/js/main.f51a6a77.js",
     "static/js/787.e4997a38.chunk.js": "/yas-front/static/js/787.e4997a38.chunk.js",
     "static/media/NanumSquareRoundR.ttf": "/yas-front/static/media/NanumSquareRoundR.f062cb52be3e9829834c.ttf",
     "static/media/NanumSquareRoundB.ttf": "/yas-front/static/media/NanumSquareRoundB.8ab117fc37409bd022e5.ttf",
@@ -12,12 +12,12 @@
     "static/media/NanumSquareRoundOTFEB.otf": "/yas-front/static/media/NanumSquareRoundOTFEB.733974e155ee3bc2e024.otf",
     "static/media/NanumSquareRoundOTFL.otf": "/yas-front/static/media/NanumSquareRoundOTFL.01252d794628d0c48d33.otf",
     "index.html": "/yas-front/index.html",
-    "main.72f7cd2c.css.map": "/yas-front/static/css/main.72f7cd2c.css.map",
-    "main.f79f581b.js.map": "/yas-front/static/js/main.f79f581b.js.map",
+    "main.f76b21b6.css.map": "/yas-front/static/css/main.f76b21b6.css.map",
+    "main.f51a6a77.js.map": "/yas-front/static/js/main.f51a6a77.js.map",
     "787.e4997a38.chunk.js.map": "/yas-front/static/js/787.e4997a38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.72f7cd2c.css",
-    "static/js/main.f79f581b.js"
+    "static/css/main.f76b21b6.css",
+    "static/js/main.f51a6a77.js"
   ]
 }
